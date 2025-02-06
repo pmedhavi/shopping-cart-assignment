@@ -17,14 +17,20 @@ describe('ShoppingCart',()=>{
         expect(items[0].price).toBe(2.52);
     });
     test('calculateCartState returns correct totals',async ()=>{
-        axios.get.mockResolvedValueOnce({data:{price:2.52}});
-        axios.get.mockResolvedValueOnce({data:{price:9.98}});
+        axios.get.mockResolvedValueOnce({data:{price:2.52}});  //for cornflakes
+        axios.get.mockResolvedValueOnce({data:{price:9.98}});  //for weetabix
+        axios.get.mockResolvedValueOnce({data:{price:8.43}});  //for cheerios 
+        axios.get.mockResolvedValueOnce({data:{price:4.99}});  //for frosties
+        axios.get.mockResolvedValueOnce({data:{price:4.68}});  //for shreddies
         await cart.addProduct('cornflakes',2);
         await cart.addProduct('weetabix',1);
+        await cart.addProduct('cheerios',1);
+        await cart.addProduct('frosties',1);
+        await cart.addProduct('shreddies',1);
         
         const state=cart.calculateCartState();
-        expect(state.subtotal).toBe(15.02);
-        expect(state.tax).toBe(1.88);
-        expect(state.total).toBe(16.90);
+        expect(state.subtotal).toBe(33.12);
+        expect(state.tax).toBe(4.14);
+        expect(state.total).toBe(37.26);
     });
 });
