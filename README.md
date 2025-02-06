@@ -1,4 +1,6 @@
 ## :warning: Please read these instructions carefully and entirely first
+
+## :notice: UPDATED CONTENT BELOW SCROLL DOWN
 * Clone this repository to your local machine.
 * Use your IDE of choice to complete the assignment.
 * Use Javascript or preferably Typescript to complete the assignment, other languages will not be considered unfortunately.
@@ -74,3 +76,22 @@ The below is a sample with the correct values you can use to confirm your calcul
 * ❌ Submit any form of app, such as web APIs, browser, desktop, or command-line applications.
 * ❌ Add unnecessary layers of abstraction.
 * ❌ Add unnecessary patterns/ architectural features that aren’t called for e.g. persistent storage.
+
+
+
+
+
+
+
+# Updated Content
+## Setup
+1. Clone the repo
+   git clone https://github.com/pmedhavi/shopping-cart-assignment.git
+   cd shopping-cart-assignment
+2. npm install
+3. npm run serve-products
+4. open another tab in terminal
+5. npm test
+
+cart.js is handling the logic
+cart.test.js is used to test the shopping cart logic using the test cases given above
